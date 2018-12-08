@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/icontwitt.png' %}">
+    <title>Đăng kí tài khoản Twitter</title>
+
+     <link rel="stylesheet" type="text/css" href="{% static 'TwitterClone/stylehome.css'%}">
+</head>
+<body>
+    <div class="contain">
+        <div class="space">
+        <div class="menu-banner">
+            <div class="menu">
+                <div class="left-context">
+                    <ul>
+                        <li><img src="{% static 'images/twitt-icon.jpg'%}" width="23px" height="23px" align="center">&nbsp;<a href="{% url 'Twitter:home'%}">Trang chủ</a></li>
+                        <li style="width: 68px !important;"><a href="#">Thông báo</a></li>
+                    </ul>
+                </div>
+                <div class="right-language">
+                   <input type="text" placeholder="Tìm kiếm">
+
+                </div>
+                <div class="acc">
+                    <img src="{% static 'images/user.png'%}">
+                    <div class="name">{{acc}}</div>
+                    <div class="logout"><a href="{% url 'Twitter:login'%}"><img src="{% static 'images/logout.png'%}"></a></div>
+                </div>
+            </div>
+        </div>
+            </div>
+        <div class="form">
+                <div class="create-post">
+                    <div class="pt-context">{{ post.context }}</div>
+                </div>
+                <div class="show">B</div>
+            </div>
+    </div>
+</body>
+</html>

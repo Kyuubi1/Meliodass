@@ -1,0 +1,80 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/icontwitt.png' %}">
+    <title>Twitter.Đó là điều đang diễn ra</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'TwitterClone/styleindex.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+<div class="contain">
+    <div class="main">
+        <div class="left-background">
+
+            <div class="intro">
+                <div class="follow-hobie">
+                    <i class="fas fa-search" style="padding-right: 15px;"></i>Theo dõi những sở thích của bạn
+
+                </div>
+                <div class="listen-ever">
+                    <i class="far fa-user" style="padding-right: 15px;"></i>Nghe nội dung mọi người đang bàn luận
+
+                </div>
+                <div class="join">
+                    <i class="far fa-comment" style="padding-right: 15px;"></i>Tham gia vào cuộc trò chuyện
+
+                </div>
+            </div>
+        </div>
+        <!--Xử lí form-->
+
+
+        <div class="right-context">
+        <div class="quick-login">
+            <form method="post" action="{% url 'Twitter:login-quickly' %}">
+                {% csrf_token %}
+                <!--<div class="login-username"><input type="text" placeholder="Tên người dùng..."></div>-->
+                <!--<div class="login-password"><input type="password" placeholder="Mật khẩu..."></div>-->
+                <div class="login-username">{{ up.username }}</div>
+                <div class="login-password">{{ up.password }}</div>
+                <div class="btn"><button type="submit" class="btn btn-outline-primary">Đăng nhập</button></div>
+                <div class="forget-password"><a href="#" >Quên mật khẩu ?</a></div>
+            </form>
+        </div>
+            <div class="get-in-page">
+                <div class="icon-twitter"><img src="{% static 'images/twitt-icon.jpg'%}"></div>
+                <p style="font-family:Arial; padding-bottom: 20px;font-size:28px; ">Xem những sự kiện đang xảy ra trên thế giới ngay lúc này</p>
+                <div class="homepage-signinup">
+                    <p style="font-size: 20px; font-weight: bold">Tham gia Twitter ngay hôm nay :</p>
+                    <div class="btn-register"><a href="{% url 'Twitter:sign-up' %}"><input type="submit" value=" Đăng kí"/></a></div>
+                    <div class="btn-sign-in"><a href="{% url 'Twitter:login' %}"><input type="submit" value="Đăng nhập"/></a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="list-menu">
+        <ul>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Trung tâm trợ giúp</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Trạng thái</a></li>
+            <li><a href="#">Việc làm</a></li>
+            <li><a href="#">Chính sách</a></li>
+            <li><a href="#">Cookie</a></li>
+            <li><a href="#">Quảng cáo</a></li>
+            <li><a href="#">Thương hiệu</a></li>
+            <li><a href="#">Ứng dụng</a></li>
+            <li><a href="#">Danh mục</a></li>
+            <li><a href="#">Cài đặt</a></li>
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>

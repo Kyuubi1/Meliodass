@@ -1,0 +1,49 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/icontwitt.png' %}">
+    <title>Đăng nhập vào Twitter</title>
+
+     <link rel="stylesheet" type="text/css" href="{% static 'TwitterClone/stylelogin.css'%}">
+</head>
+<body>
+    <div class="contain">
+        <div class="space">
+        <div class="menu-banner">
+            <div class="menu">
+                <div class="left-context">
+                    <ul>
+                        <li><img src="{% static 'images/twitt-icon.jpg'%}" width="23px" height="23px" align="center">&nbsp;<a href="{% url 'Twitter:index'%}">Trang chủ</a></li>
+                        <li style="width: 68px !important;"><a href="#">Giới thiệu</a></li>
+                    </ul>
+                </div>
+                <div class="right-language">
+                    <span>Ngôn ngữ : </span>&nbsp;<a href="#">Tiếng Việt</a>
+                </div>
+            </div>
+        </div>
+            </div>
+        <div class="form">
+        <div class="form-login">
+                <div class="ft-login">
+            <form action="{% url 'Twitter:login'%}" method="post">
+                {%  csrf_token %}
+                <h2><b>Đăng nhập vào Twitter</b></h2>
+                <div class="login-username">{{ up.username }}</div>
+                <div class="login-password">{{ up.password }}</div>
+                <div class="btn-login"><input type="submit" value="Đăng nhập"><a href="#">Quên mật khẩu ?</a></div>
+            </form>
+                </div>
+        </div>
+            <div class="context-tw">
+                <div class="context-in">
+                    <p>Mới dùng Twitter? &nbsp;<a href="#">Đăng kí ngay >></a></p>
+                    <p>Bạn đã dùng Twitter qua tin nhắn văn bản &nbsp;<a href="#">Kích hoạt tài khoản của bạn? >></a></p>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>

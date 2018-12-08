@@ -1,0 +1,183 @@
+.contain{
+    width: 100%;
+    height: 100%;
+}
+.main
+{
+    width: 100%;
+    margin-top: -15px;
+
+
+}
+.left-background{
+    width: 48%;
+    float: left;
+    background-image:url("../images/twitter-cards.png") ;
+
+
+
+    min-height:870px;
+}
+.right-context
+{
+    width:52%;
+
+    min-height: 870px;
+    float: right;
+    border-bottom: 1px solid lightgray;
+
+}
+.intro{
+    max-width: 440px;
+    height: 250px;
+
+    display: block;
+    margin-top: 300px;
+    margin-left: 250px;
+}
+.follow-hobie
+{
+    padding-top: 10px;
+    color: white;
+    font-family:"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size:20px;
+    font-weight: bold;
+    padding-bottom: 35px;
+}
+.listen-ever{
+    color: white;
+    font-family:"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size:20px;
+    font-weight: bold;
+    padding-bottom: 35px;
+}
+.join{
+    color: white;
+    font-family:"Roboto", "Lucida Grande", Verdana, Arial, sans-serif;
+    font-size:20px;
+    font-weight: bold;
+}
+.quick-login
+{
+
+    margin-left:280px;
+    margin-top: 30px;
+}
+.login-username
+{
+    float: left;
+
+    padding-right: 20px;
+    padding-top: 5px;
+}
+.login-username input
+{
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid darkgray;
+    outline:none;
+
+}
+.login-password
+{
+    float: left;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+.login-password input{
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid darkgray;
+    outline:none;
+
+
+}
+.btn{
+    float: left;
+}
+
+.forget-password
+{
+    padding-top: 55px;
+    padding-left: 215px;
+
+}
+.forget-password a{
+    color: darkgray;
+    font-size: 14px;
+}
+.forget-password a:hover
+{
+    color:darkgray;
+}
+.get-in-page
+{
+
+    max-width: 400px;
+    height: 395px;
+
+    display: block;
+    margin-top: 195px;
+    margin-left: 350px;
+}
+.icon-twitter img
+{
+    width:70px;
+    height: 50px;
+}
+.btn-register {
+    margin-bottom: 20px;
+}
+.btn-register input
+{
+    width: 400px;
+    height: 40px;
+    color: white;
+    border: 1px solid #33CCFF;
+    border-radius: 15px;
+    background-color: #33CCFF;
+    font-size: 15px;
+    }
+.btn-register :hover
+{
+    background-color: dodgerblue;
+}
+.btn-sign-in input{
+    width: 400px;
+    height: 40px;
+    color: #33CCFF;
+    border: 1px solid #33CCFF;
+    border-radius: 15px;
+    font-size:15px;
+    background-color: white;
+}
+.btn-sign-in :hover
+{
+    background-color: lavender;
+}
+.list-menu
+{
+    height: 50px;
+    display: block;
+    padding-top: -20px;
+
+
+
+}
+.list-menu ul li{
+    float: left;
+    width: 104px;
+    display: inline-block;
+    margin-left: 35px;
+    text-align: center;
+
+}
+.list-menu ul li a{
+    list-style-type: none;
+    font-size: 12px;
+    text-align: center;
+    line-height: 100px;
+    color:darkgray;
+
+}
+

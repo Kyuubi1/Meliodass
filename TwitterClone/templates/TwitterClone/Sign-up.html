@@ -1,0 +1,52 @@
+{%  load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="{% static 'images/icontwitt.png' %}">
+    <title>Đăng kí tài khoản Twitter</title>
+
+     <link rel="stylesheet" type="text/css" href="{% static 'TwitterClone/stylesignup.css'%}">
+</head>
+<body>
+    <div class="contain">
+        <div class="space">
+        <div class="menu-banner">
+            <div class="menu">
+                <div class="left-context">
+                    <ul>
+                        <li><img src="{% static 'images/twitt-icon.jpg'%}" width="23px" height="23px" align="center">&nbsp;<a href="{% url 'Twitter:index'%}">Trang chủ</a></li>
+                        <li style="width: 68px !important;"><a href="#">Giới thiệu</a></li>
+                    </ul>
+                </div>
+                <div class="right-language">
+                    <span>Ngôn ngữ : </span>&nbsp;<a href="#">Tiếng Việt</a>
+                </div>
+            </div>
+        </div>
+            </div>
+        <div class="form">
+        <div class="form-sign-up">
+                <div class="ft-sign-up">
+            <form action="{% url 'Twitter:sign-up'%}" method="post">
+                {%  csrf_token %}
+                <h2><b>Tạo tài khoản của bạn</b></h2>
+                <div class="sign-up-username">{{ in.username }}</div>
+                <div class="sign-up-password">{{ in.password }}</div>
+                <div class="sign-up-email">{{ in.email }}</div>
+                <div class="sign-up-sex">{{in.sex}}</div>
+                <div class="sign-up-phone">{{in.phone}}</div>
+                <div class="btn-sign-up"><input type="submit" value="Đăng kí"></div>
+            </form>
+                </div>
+        </div>
+            <div class="context-tw">
+                <div class="context-in">
+                    <p>Trải nghiệm tuyệt vời cùng Twitter</p>
+                    <p>Bạn đã dùng Twitter qua tin nhắn văn bản &nbsp;<a href="#">Kích hoạt tài khoản của bạn? >></a></p>
+                </div>
+            </div>
+            </div>
+    </div>
+</body>
+</html>
